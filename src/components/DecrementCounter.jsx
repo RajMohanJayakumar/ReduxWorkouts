@@ -4,8 +4,14 @@ import { counterButtonStyle } from '../styles/buttonStyles';
 
 function DecrementCounter(props) {
     return (
-        <button style={counterButtonStyle()} onClick={() => props.dispatch(decrementDispatch())}>-</button>
+        <button style={counterButtonStyle()} onClick={() => props.decrementCounter()}>-</button>
     )
 }
 
-export default connect()(DecrementCounter);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        decrementCounter: () => dispatch(decrementDispatch())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(DecrementCounter);

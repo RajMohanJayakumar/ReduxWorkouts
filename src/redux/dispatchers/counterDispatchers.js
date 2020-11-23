@@ -1,14 +1,16 @@
 import { counter as counterAction } from '../actions';
 
-const incrementDispatch = () => {
+const incrementDispatch = (payload) => {
     return {
         type: counterAction.INCREMENT,
+        payload,
     }
 }
 
-const decrementDispatch = () => {
+const decrementDispatch = (payload) => {
     return {
         type: counterAction.DECREMENT,
+        payload,
     }
 }
 

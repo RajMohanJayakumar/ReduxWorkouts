@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { decrementDispatch } from '../redux/dispatchers/counterDispatchers';
+import { decrementDispatch } from '../redux/actionsCreator/counterDispatchers';
 import { counterButtonStyle } from '../styles/buttonStyles';
 
 function DecrementCounter(props) {

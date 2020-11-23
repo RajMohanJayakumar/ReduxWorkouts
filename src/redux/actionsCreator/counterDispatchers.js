@@ -14,7 +14,17 @@ const decrementDispatch = (payload) => {
     }
 }
 
+const incrementAsycDispatch = (payload) => {
+    return (dispatch) => {
+        dispatch({type: counterAction.LOADING, payload: true});
+        setTimeout(() => {
+            dispatch(incrementDispatch(payload));
+        }, 1500);
+    }
+}
+
 export {
     incrementDispatch, 
     decrementDispatch,
+    incrementAsycDispatch,
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import ShowCount from './components/ShowCount';
 import IncrementCounter from './components/IncrementCounter';
 import DecrementCounter from './components/DecrementCounter';
+import IncrementAsyncCounter from './components/IncrementAsyncCounter';
 
 class App extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class App extends React.Component {
        <ShowCount />
        <IncrementCounter />
        <DecrementCounter />
+       <IncrementAsyncCounter />
       </div>
     );
   }

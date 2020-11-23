@@ -1,6 +1,6 @@
 import React from 'react';
 import { counterButtonStyle } from '../styles/buttonStyles';
-import { incrementDispatch } from '../redux/dispatchers/counterDispatchers';
+import { incrementDispatch } from '../redux/actionsCreator/counterDispatchers';
 import { connect } from 'react-redux';
 
 class IncrementCounter extends React.Component {

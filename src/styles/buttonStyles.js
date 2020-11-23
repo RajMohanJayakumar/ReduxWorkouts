@@ -1,6 +1,6 @@
 const counterButtonStyle = () => {
     return {
-        'width': '100px',
+        'width': '130px',
         'marginRight': '10px',
         'color': 'blue',
         'backgroundColor': '#f2efea',

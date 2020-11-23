@@ -2,13 +2,17 @@ import { connect } from 'react-redux';
 
 const ShowCount = (props) => {
     return (
-        <h1>{props.count}</h1>
+        <div>
+            <h1>{props.count}</h1>
+            <h3>{props.loading ? 'Loading...' : ''}</h3>
+        </div>
     )
 }
 
 function mapStateToProps (state) {
         return {
             count: state.countObj.count,
+            loading: state.countObj.loading,
         }
 }
 

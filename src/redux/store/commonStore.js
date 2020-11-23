@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from '../reducers/rootReducer';
+import thunk from 'redux-thunk';
 
 const captureMiddleWare = () => {
     return (next) => {
@@ -12,6 +13,10 @@ const captureMiddleWare = () => {
     }
 }
 
-const commonStore = createStore(rootReducer, compose(applyMiddleware(captureMiddleWare), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+const commonStore = createStore(rootReducer, compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 
 export default commonStore;
+
+/**
+ * Can switch between custom middleware(captureMiddleware) and thunk middleware by changing the paramenter in `applyMiddleWare`
+ */
